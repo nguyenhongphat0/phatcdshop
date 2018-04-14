@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Default.css">
+    <script src="function.js"></script>
+    <script src="database.js"></script>
+    <title>Document</title>
+</head>
+<body onload="showGameList(); tinhTien()">
+    <div id="orderbill" class="" >
+    <form action="done.html">
+        <h1>Đơn đặt hàng</h1>
+        <h3>Vui lòng nhập đầy đủ thông tin của bạn<br><span class="italic"> *(nếu người mua không phải người nhận thì chỉ cần nhập thông tin người nhận)</span></h3>
+        <table width="90%">
+            <tr>
+                <td><span class="green"><br/>Tên của bạn</span></td>
+            </tr>
+            <tr>
+                <td><input type="text" required></td>
+                <td><input type="text" required></td>
+            </tr>
+            <tr>
+                <td width="50%" class="italic">Họ</td>
+                <td class="italic">Tên</td>
+            </tr>
+            <tr>
+                <td><span class="green"><br/>Liên hệ</span></td>
+            </tr>
+            <tr>
+                <td><input type="text" required pattern="[0-9]{6,10}" title="Chỉ bao gồm kí tự số, dài từ 6 đến 10 kí tự"></td>
+                <td><input type="text" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,3}$" title="Email phải có dạng: aido@tenmien.com"></td>
+            </tr>
+            <tr>
+                <td class="italic">Số điện thoại</td>
+                <td class="italic">Email</td>
+            </tr>
+            <tr>
+                <td><span class="green"><br/>Địa chỉ</span></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="italic">Nhập địa chỉ nhận hàng</td>
+                
+            </tr>
+            <tr>
+                <td colspan="2"><input type="text" required></td>
+            </tr>
+            <tr>
+                <td><span class="green"><br/>Thông tin sản phẩm đặt mua</span></td>
+            </tr>
+            <tr>
+                <td class="italic">Bạn muốn mua đĩa game:</td>
+                <td class="italic">Số lượng:</td>
+                
+            </tr>
+            <tr>
+                <td><select name="game" id="optionlist" oninput="tinhTien()"></select></td>
+                <td><input type="text" id="sl" oninput="tinhTien()" required pattern="[0-9]{1,}" value="1" title="Chỉ bao gồm kí tự số"></td>
+            </tr>
+            
+            
+        </table>
+        <h3>Tổng tiền: </h3>
+        <h1 id="tongtien"></h1>
+        <input type="Submit" value="Đặt hàng" class="button"/>
+    </form>
+    </div>
+
+</body>
+</html>

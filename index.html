@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Default.css" type="text/css" media="screen and (min-width: 800px)">
+    <link rel="stylesheet" href="Phone.css" type="text/css" media="screen and (max-width: 800px)">
+    <script src="function.js"></script>
+    <title>Phát's CD</title>
+
+</head>
+<body onload="focuson(1)">
+    <div id="panel" class="" >
+        <ul>
+            <a href="homepage.html" target="menu"><li id="tab1" onclick="focuson(1); hide345()">TRANG CHỦ</li></a>
+            <a href="product.html" target="menu"><li id="tab2" onclick="focuson(2); show345()">TRÒ CHƠI</li></a>
+            <a href="shooter.html" target="menu"><li id="tab3" onclick="focuson(3)">FPS</li></a>
+            <a href="strategy.html" target="menu"><li id="tab4" onclick="focuson(4)">RTS</li></a>
+            <a href="platform.html" target="menu"><li id="tab5" onclick="focuson(5)">2DP</li></a>
+            <a href="order.html" target="menu"><li id="tab6" onclick="focuson(6); hide345()">ĐẶT HÀNG</li></a>
+        </ul>
+        <div id="followus">
+            <a href="https://www.facebook.com.vn" target="_blank"><img id="" class="follow" src="icon\fb.png"></img></a>
+            <a href="https://www.twitter.com.vn" target="_blank"><img id="" class="follow" src="icon\tw.png"></img></a>
+            <a href="https://www.googleplus.com.vn" target="_blank"><img id="" class="follow" src="icon\gg.png"></img></a>
+            <a href="https://www.rss.com.vn" target="_blank"><img id="" class="follow" src="icon\rss.png"></img></a>
+        </div>
+    </div>
+    <iframe name="menu" id="menu" src="homepage.html"></iframe>
+
+    
+</body>
+</html>
