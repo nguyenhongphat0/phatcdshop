@@ -51,13 +51,17 @@ function Game(name, price, size, type, publishDate, maker, minimumRequirement, r
         document.body.style.overflow = "visible";
         var bot = document.getElementById("bot");
         bot.style.display = "block";
-        bot.style.transform = "translateY(-100vh)";
         var t = document.getElementById(id);
         t.innerHTML = "<img src=\"" + this.pic2 + "\"><img src=\"" + this.pic3 + "\"><img src=\"" + this.pic4 + "\">";
         var info = document.getElementById("info");
         s = info.innerHTML;
         info.innerHTML += this.toString();
         info.style.opacity = 0.8;
+        if (window.matchMedia("(max-width: 800px)").matches) {
+            document.getElementById("top").style.display = 'none';
+        } else {
+            bot.style.transform = "translateY(-100vh)";
+        }
     }
 }
 
@@ -67,9 +71,13 @@ function hideInfo()
     info.style.opacity = 0;
     info.innerHTML = s;
     var bot = document.getElementById("bot");
-    bot.style.transform = "translateY(0px)";
-    document.body.style.height = "100vh";
-    document.body.style.overflow = "hidden";    
+    if (window.matchMedia("(max-width: 800px)").matches) {
+        document.getElementById("top").style.display = 'block';
+    } else {
+        bot.style.transform = "translateY(0px)";
+        document.body.style.height = "100vh";
+        document.body.style.overflow = "hidden";
+    }
 }
 
 function showGameList()

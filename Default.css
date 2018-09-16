@@ -309,6 +309,7 @@ input[value = "Ubisoft"]
     left: 0px;
     top: 0px;
     z-index: 200px;
+    cursor: pointer;
 }
 
 #btg
@@ -389,13 +390,6 @@ input[type="text"]:focus
     top: 130px;
 }
 
-#allgames
-{
-    position: fixed;
-    bottom: 20px;
-    right: 50px;
-}
-
 #top
 {
     width: 100%;
@@ -416,7 +410,9 @@ input[type="text"]:focus
 {
     width: 100%;            
     transition-duration: 1s;
-    float: left;    
+    float: left;
+    position: absolute;
+    top: 100vh;
 }
 
 .outer
