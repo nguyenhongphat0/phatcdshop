@@ -300,6 +300,8 @@ input[value = "Ubisoft"]
     z-index: 100;
     position: fixed;
     bottom: 0px;
+    max-height: 80vh;
+    overflow-y: scroll;
 }
 
 #thongtin
