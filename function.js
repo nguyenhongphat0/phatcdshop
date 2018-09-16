@@ -60,7 +60,9 @@ function Game(name, price, size, type, publishDate, maker, minimumRequirement, r
         if (window.matchMedia("(max-width: 800px)").matches) {
             document.getElementById("top").style.display = 'none';
         } else {
-            bot.style.transform = "translateY(-100vh)";
+            setTimeout(() => {
+                bot.style.transform = "translateY(-100vh)";                
+            }, 10);
         }
     }
 }
@@ -74,9 +76,10 @@ function hideInfo()
     if (window.matchMedia("(max-width: 800px)").matches) {
         document.getElementById("top").style.display = 'block';
     } else {
-        bot.style.transform = "translateY(0px)";
-        document.body.style.height = "100vh";
-        document.body.style.overflow = "hidden";
+        bot.style.transform = "translateY(1000px)";
+        setTimeout(() => {
+            bot.style.display = "none";
+        }, 1000);
     }
 }
 
